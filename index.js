@@ -48,7 +48,7 @@ const parser = yargs(process.argv.slice(2))
   .example('$0 --dep-name my-updated-package --current-version 1.0.0 --new-version 2.0.0 --is-lock-file-maintenance false', '');
 
 (async () => {
-  const { format, path, depName, newVersion, currentVersion, ignoreFailure } = await parser.argv;
+  const { format, path, depName, newVersion, currentVersion, isLockFileMaintenance, ignoreFailure } = await parser.argv;
   
   try {
     await fs.access(path);
