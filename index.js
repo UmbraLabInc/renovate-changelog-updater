@@ -54,7 +54,7 @@ const parser = yargs(process.argv.slice(2))
     await fs.access(path);
   } catch (e) {
     console.error('CHANGELOG.md not found. Exiting.');
-    process.exit(1);
+    process.exit(0);
   }
   
   let changelogBuffer;
